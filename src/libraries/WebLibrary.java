@@ -30,10 +30,10 @@ public class WebLibrary extends DriverClass {
 	 * 
 	 * Author : Testing Masters Technologies
 	 */
-	public boolean validateText(WebElement element, String expText) {
+	public boolean validateText(WebElement element, Object expText) {
 		try {
 			String actText = element.getText();
-			if (actText.equals(expText)) {
+			if (actText.equals(expText.toString())) {
 				status = true;
 			}
 

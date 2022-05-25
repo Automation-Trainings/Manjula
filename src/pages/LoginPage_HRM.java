@@ -16,10 +16,10 @@ public class LoginPage_HRM extends WebLibrary{
 	
 	boolean status;
 	
-	@FindBy(xpath="//*[@id='txtUsername']")
+	@FindBy(xpath="//*[@id='txtUsername']") 
 	public WebElement userName;
 	
-	@FindBy(xpath="//*[@id='txtPassword']") 
+	@FindBy(xpath="//*[@id='txtPasswor']") 
 	public WebElement passWord;
 	
 	@FindBy(xpath="//*[@id='btnLogin']") 
@@ -41,6 +41,11 @@ public class LoginPage_HRM extends WebLibrary{
 	public void Login() {
 		status = ClickElement(loginBtn);
 		logEvent(status, "Login button is clicked successfully", "Login button is not clicked successfully");
+	}
+	
+	public void VerifyTextLabel(Object expText) {
+		status = validateText(loginText, expText);
+		logEvent(status, "Text is matching", "Text is not matching");
 	}	
 	
 }

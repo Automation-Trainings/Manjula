@@ -9,5 +9,6 @@ public class CommonVariables {
 	public static String TestDataPath = "C:\\Users\\hp\\eclipse-workspace\\TM_Manjula\\TestData\\TestData.xlsx";
 	public static String CurrentTestCaseName;
 	public static String Browser = "FF";
+	public static String sheetName ;
 
 }
