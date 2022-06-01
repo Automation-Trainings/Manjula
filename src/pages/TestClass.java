@@ -1,24 +1,18 @@
-/**
- * 
- */
 package pages;
 
-import org.openqa.selenium.support.PageFactory;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.support.FindBy;
 
 import libraries.WebLibrary;
 
-/**
- * @author hp
- *
- */
 public class TestClass extends WebLibrary{
 	
 	public TestClass() {
-		PageFactory.initElements(driver, this);
 		launchApplication(BaseURL);
 	}
 	
-	boolean status;	
+	boolean status;
 	
+	@FindBy(id="abcd") public WebElement abc;
 
 }
